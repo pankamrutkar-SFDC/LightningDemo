@@ -1,0 +1,11 @@
+public class AccountRecords {
+
+    @AuraEnabled
+    public static List<Account> getAccount(){
+        
+        List<Account> lst=[Select Id,Name,Industry from Account limit 10];
+        
+        return lst;
+    }
+    
+}

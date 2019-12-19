@@ -1,0 +1,11 @@
+<aura:component controller="AccountRecords" implements="flexipage:availableForAllPageTypes">
+ <div class="slds-text-heading_large">List Of Records</div>	
+    <aura:attribute name="records" type="Account[]"/>
+   <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+       <aura:attribute name="columns" type="List"/>
+    <lightning:datatable data="{! v.records }"
+                         columns="{! v.columns }"
+                         keyField="id"
+                         hideCheckboxColumn="true"/>
+
+</aura:component>
